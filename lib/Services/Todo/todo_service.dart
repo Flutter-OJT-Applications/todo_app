@@ -2,7 +2,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:todo_app/Models/Todo/todo_model.dart';
 import 'package:todo_app/Repositories/Todo/todo_repository.dart';
-import 'package:todo_app/Repositories/crud_repository.dart';
 
 class TodoService{
   late TodoRepository _repository;

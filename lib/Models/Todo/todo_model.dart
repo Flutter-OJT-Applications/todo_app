@@ -23,7 +23,6 @@ class TodoModel {
 
   @override
   String toString() {
-    // TODO: implement toString
     return "{id: $id, title: $title, description: $description}";
   }
 }
