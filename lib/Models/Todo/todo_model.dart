@@ -12,4 +12,18 @@ class TodoModel {
   factory TodoModel.fromDB(Map<String, dynamic> data){
     return TodoModel(id: data['id'],title: data['title'], description: data['description']);
   }
+
+  Map<String, Object?> toObject(){
+    return {
+      "id": id,
+      "title": title,
+      "description": description
+    };
+  }
+
+  @override
+  String toString() {
+    // TODO: implement toString
+    return "{id: $id, title: $title, description: $description}";
+  }
 }

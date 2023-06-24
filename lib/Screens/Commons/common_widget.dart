@@ -24,6 +24,15 @@ class CommonWidget {
     backgroundColor: Colors.black38,
   );
 
+  /// The secondary button style
+  static ButtonStyle dangerButtonStyle() => ElevatedButton.styleFrom(
+    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(15),
+    ),
+    backgroundColor: Colors.red,
+  );
+
   /// The basic input style
   static InputDecoration inputStyle({String? placeholder}) => InputDecoration(
     hintText: placeholder??"Enter text",

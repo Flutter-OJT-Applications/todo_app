@@ -1,10 +1,10 @@
-import 'package:todo_app/Repositories/repository.dart';
+import 'package:todo_app/Repositories/crud_repository.dart';
 
 import '../../Models/Todo/todo_model.dart';
 
 class TodoRepository extends CRUDRepository<TodoModel> {
   @override
-  Future<int?> create(Map<String, Object> data) async {
+  Future<int?> create(Map<String, Object?> data) async {
     return await database.insert('todo', data);
   }
 
@@ -27,7 +27,7 @@ class TodoRepository extends CRUDRepository<TodoModel> {
   }
 
   @override
-  Future<int?> update(Map<String, Object> data) async{
-    return await database.update('todo', data);
+  Future<int?> update(id,Map<String, Object?> data) async{
+    return await database.update('todo', data, where: 'id = ?', whereArgs: [id]);
   }
 }
