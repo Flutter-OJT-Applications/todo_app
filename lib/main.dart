@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:todo_app/Screens/home_screen.dart';
 import 'package:todo_app/Services/Commons/entity_service.dart';
 
@@ -15,7 +16,7 @@ class TodoApp extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return GetMaterialApp(
       title: 'Todo Application',
       home: HomeScreen(),
     );
